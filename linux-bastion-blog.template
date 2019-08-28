@@ -26,6 +26,8 @@ Metadata:
           - BastionBanner
           - EnableTCPForwarding
           - EnableX11Forwarding
+          - AltInitScript
+          - OSImageOverride
 
     ParameterLabels:
       BastionTenancy:
