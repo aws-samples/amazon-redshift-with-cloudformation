@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'Amazon Redshift Oct 5,2021'
+Description: 'Amazon Redshift CloudFormation Oct 31,2021'
 Transform: AWS::SecretsManager-2020-07-23
 Parameters:
   VPCID:
@@ -222,8 +222,14 @@ Metadata:
         default: Amazon S3 bucket for Redshift IAM role
       NotificationList:
         default: Email address for SNS notification
+      EnableAQUA:
+        default: Enable AQUA
       EnableLoggingToS3:
         default: Enable Redshift logging to S3
+      EnableCrossAZRelocation:
+        default: Enable cross-AZ relocation
+      EnableVPCEnhancedRouting:
+        default: Enable VPC enhanced routing
       MaxConcurrentCluster:
         default: Max. number of concurrent clusters
       EncryptionAtRest:
@@ -237,7 +243,9 @@ Metadata:
       ConcurrencyScaling:
         default: Concurrency Scaling 
       Maintenancewindow:
-        default: Maintenance window
+        default: Maintenance window 
+      AutoPasswordRotationIntervalDays:
+        default: Automatic password rotation interval (in days)
       TagEnvironment:
         default: Environment
       TagName:
