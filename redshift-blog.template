@@ -42,13 +42,15 @@ Parameters:
   NodeType:
     Description: The type of node to be provisioned
     Type: String
-    Default: dc2.large
+    Default: ra3.4xlarge
     AllowedValues:
+      - ra3.4xlarge
+      - ra3.16xlarge
       - dc2.large
       - dc2.8xlarge
       - ds2.xlarge
       - ds2.8xlarge
-  
+      
   MasterUsername:
     Description: The user name that is associated with the master user account for the cluster that is being created
     Type: String
